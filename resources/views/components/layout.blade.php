@@ -24,9 +24,9 @@
 
 
     <script type="text/javascript" src="{{ asset('js/vanilla-calendar.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/range.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('js/range.js') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="{{ asset('js/foundationInit.js') }}"></script>
 </body>
 
 </html>

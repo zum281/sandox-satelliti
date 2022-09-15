@@ -11,7 +11,6 @@
         <x-button color="green">Confronta</x-button>
     </div>
 
-    <x-slider />
 
     <x-listing />
 

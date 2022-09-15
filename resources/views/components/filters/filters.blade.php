@@ -5,7 +5,7 @@
         <input type="text" placeholder="Milano">
     </x-filters.accordion>
     <x-filters.accordion title="Prezzo">
-        <x-range />
+        <x-slider />
     </x-filters.accordion>
     <x-filters.accordion title="Tipo">
         <div class="filter__type">

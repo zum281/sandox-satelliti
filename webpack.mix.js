@@ -17,7 +17,8 @@ mix.copy("resources/assets/plugins/vanilla-calendar.min.js", "public/js");
 
 mix.js("resources/js/app.js", "public/js")
     .js("resources/js/main.js", "public/js")
-    .js("resources/js/range.js", "public/js");
+    .js("resources/js/range.js", "public/js")
+    .js("resources/js/foundationInit.js", "public/js");
 
 mix.sass("resources/sass/main.scss", "public/css", {
     additionalData: `$test: ${process.env.TEST};`,

@@ -1,9 +1,3 @@
-import $ from "jquery";
-import { Foundation } from "foundation-sites";
-
-Foundation.addToJquery($);
-$(document).foundation();
-
 changeTab = (tabName, id) => {
     let card = document.getElementById(id);
     let tabToShow = card.querySelector(`.${tabName}`);
