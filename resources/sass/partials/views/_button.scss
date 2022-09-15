@@ -1,0 +1,76 @@
+.btns-container {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+button {
+    border: 1px solid;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    &:hover {
+        .icon {
+            &.icon__map {
+                background: url("../../../assets/icons/map-icon-light.svg")
+                    no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+
+            &.icon__date {
+                background: url("../../../assets/icons/calendar-icon-light.svg")
+                    no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+
+    .icon {
+        display: inline-block;
+        width: 18px;
+        aspect-ratio: 1;
+
+        &.icon__map {
+            background: url("../../../assets/icons/map-icon.svg") no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &.icon__date {
+            background: url("../../../assets/icons/calendar-icon.svg");
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    &.btn-purple {
+        color: $dark-blue;
+        border-color: $dark-blue;
+
+        &:hover {
+            color: $white;
+            background-color: $dark-blue;
+        }
+    }
+
+    &.btn-green {
+        color: $light-blue;
+        border-color: $light-blue;
+
+        &:hover {
+            color: $white;
+            background-color: $light-blue;
+        }
+    }
+}

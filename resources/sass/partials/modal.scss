@@ -1,0 +1,173 @@
+.modal {
+    position: absolute;
+    inset: 0;
+    background-color: $white;
+    color: $black;
+    z-index: 1;
+    overflow: scroll;
+    padding-bottom: calc(40.8px + 32px);
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 1em;
+        margin-right: 1em;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+
+    &__content {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    &__footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px,
+            rgba(17, 17, 26, 0.05) 0 8px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        padding: 16px 32px;
+        background-color: #fff;
+
+        button {
+            border: 1px solid;
+            border-radius: 2px;
+            padding: 10px 16px;
+            font-size: 1rem;
+            background: transparent;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .reset {
+            color: $black;
+            border: 1px solid $black;
+        }
+
+        .submit {
+            background-color: $light-blue;
+            color: $white;
+        }
+    }
+}
+
+.accordion__summary {
+    list-style: none; // Remove arrow
+    &::-webkit-details-marker {
+        display: none; // Remove arrow
+    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+        content: "";
+        background-image: url("../../assets/icons/chevron-down.svg");
+        width: 18px;
+        height: 18px;
+        display: block;
+    }
+}
+
+.accordion[open] .accordion__summary::after {
+    content: "";
+    background-image: url("../../assets/icons/chevron-up.svg");
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.filter__type {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em;
+
+    label {
+        display: flex;
+        gap: 1em;
+        width: 100%;
+
+        span {
+            padding: 4px;
+        }
+        .circle {
+            margin-left: auto;
+            border-radius: 50%;
+            background-color: $dark-blue;
+            color: $white;
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            padding: 4px;
+            font-size: 0.85rem;
+        }
+    }
+
+    summary {
+        list-style: none; // Remove arrow
+        &::-webkit-details-marker {
+            display: none; // Remove arrow
+        }
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        border-bottom: 1px solid $black;
+        width: fit-content;
+
+        &::before {
+            content: "+";
+        }
+    }
+
+    details[open] summary::before {
+        content: "-";
+    }
+
+    .apts__dimensions_select__container {
+        padding-block: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+
+            font-size: 0.75rem;
+            color: gray;
+
+            input {
+                width: 100%;
+                background: transparent;
+                border: 1px solid $black;
+                outline: none;
+                padding: 8px;
+                font-size: 0.85rem;
+                color: $black;
+
+                &:focus {
+                    outline: 1px solid $light-blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "~foundation-sites/scss/foundation.scss";
+@include foundation-everything(true);
+
+@import "partials/reset";
+@import "partials/colors";
+@import "partials/modal.scss";
+@import "partials/range.scss";
+
+@import "partials/views/home.scss";
+
+// * {
+//     color: $test;
+// }

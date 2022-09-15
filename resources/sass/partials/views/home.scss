@@ -1,0 +1,21 @@
+@import "header";
+@import "button";
+@import "card";
+@import "listing";
+
+.ad-container {
+    border: none;
+    border-top: 1px solid gray;
+
+    legend {
+        color: gray;
+        margin: 0 auto;
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+
+    .ad {
+        background-color: lightgreen;
+        padding: 16px;
+    }
+}

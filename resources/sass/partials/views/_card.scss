@@ -1,0 +1,115 @@
+.card {
+    max-height: 450px;
+    border-radius: 2px;
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 0.25em;
+        padding: 16px;
+
+        .tab {
+            padding: 0;
+            border: none;
+            background: transparent;
+            outline: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: $light-blue;
+            cursor: pointer;
+        }
+        .separator {
+            display: block;
+            height: 1rem;
+            border-left: 1px solid $black;
+        }
+
+        .active {
+            color: $dark-blue;
+            cursor: auto;
+        }
+
+        .cta {
+            border: none;
+            color: $white;
+            background: $dark-blue;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+
+            text-transform: uppercase;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-left: auto;
+        }
+    }
+
+    &__content {
+        .top,
+        img {
+            width: 100%;
+            aspect-ratio: 7/5;
+        }
+
+        &__group {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-evenly;
+            gap: 0.85em;
+            padding: 16px;
+            max-height: 100%;
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            .info__body {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                p:first-child::before {
+                    content: url("../../../assets/icons/dv-logo-small.svg");
+                    margin-right: 0.25em;
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+
+                    span:first-child {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+
+            .apt__info {
+                width: 100%;
+
+                &__item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 0.75rem;
+                    line-height: 1.75;
+
+                    dt {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .apt__description {
+                line-height: 1.5;
+                max-height: 35%;
+                text-overflow: ellipsis;
+                overflow-y: scroll;
+            }
+        }
+    }
+}
