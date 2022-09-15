@@ -1,3 +1,6 @@
+import $ from "jquery";
+$(document).foundation();
+
 changeTab = (tabName, id) => {
     let card = document.getElementById(id);
     let tabToShow = card.querySelector(`.${tabName}`);
