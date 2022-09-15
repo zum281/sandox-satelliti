@@ -11,10 +11,10 @@
         <x-button color="green">Confronta</x-button>
     </div>
 
-    <div>
-        <x-sidebar />
-        <x-listing />
-    </div>
+    <x-slider />
+
+    <x-listing />
+
 
 
 

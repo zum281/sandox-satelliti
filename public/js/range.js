@@ -89,7 +89,6 @@ function getParsed(currentFrom, currentTo) {
 }
 
 function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
-  console.log("here");
   var rangeDistance = to.max - to.min;
   var fromPosition = from.value - to.min;
   var toPosition = to.value - to.min;
